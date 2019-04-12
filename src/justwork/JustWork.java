@@ -95,7 +95,7 @@ public class JustWork implements KeyListener, MouseListener{
         left = new Animation();
         right = new Animation();
         try {
-            maps = ImageIO.read(getClass().getResource("/images/CAT.JPG"));
+            maps = ImageIO.read(getClass().getResource("/images/mapgrass.png"));
                     } catch (IOException ex) {
             Logger.getLogger(JustWork.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -105,32 +105,36 @@ public class JustWork implements KeyListener, MouseListener{
         map = new Map(maps);
         map.setX(-map.getWidth()/2);
         map.setY(-map.getHeight()/2);
-            
-        
-               
+
+
+
         monsters = new Monster[12];
         guards = new Monster[8];
-        
+
         String path = "/images/spritesheet1.png";
-        
+
         setup(path, up, 96, 4, 4);
         setup(path, down, 96, 4, 1);
         setup(path, left, 96, 4, 2);
         setup(path, right, 96, 4, 3);
+//        setup(path, up, 48, 4, 4);
+//        setup(path, down, 48, 4, 1);
+//        setup(path, left, 48, 4, 2);
+//        setup(path, right, 48, 4, 3);
         w.addKeyListener(this);
         w.addMouseListener(this);
-        
-        mc = new Character(down);        
+
+        mc = new Character(down);
         defX = s.getWidth()/2;
         defY = s.getHeight()/2;
         //sets the mc's coordinates to the middle of the screen
         mc.setX(defX);
         mc.setY(defY);
-        
-        
+
+
         Animation mon = new Animation();
         Animation p = new Animation();
-        Animation g = new Animation();     
+        Animation g = new Animation();
         Animation a = new Animation();
         Animation b = new Animation();
         try {
@@ -139,23 +143,23 @@ public class JustWork implements KeyListener, MouseListener{
             g.addScene(ImageIO.read(getClass().getResource("/images/guard1.png")),100);
             a.addScene(ImageIO.read(getClass().getResource("/images/attack.png")), 100);
             b.addScene(ImageIO.read(getClass().getResource("/images/specialAttack.png")), 100);
-        
+
             //menu
             statMenu = new Menu(100,100, mc);
             statButton = new Button("",s.getWidth()-100, s.getHeight()-75, 60,60);
             statButton.setImage(ImageIO.read(getClass().getResource("/images/SP.png")));
-            
-            
+
+
                     } catch (IOException ex) {
             Logger.getLogger(JustWork.class.getName()).log(Level.SEVERE, null, ex);
         }
 //        Image mons = new ImageIcon("src\\images\\monster1.png").getImage();
 //        mon.addScene(mons, 200);
 
-        
+
         //Princess
 //        p.addScene(new ImageIcon("src\\images\\princess1.png").getImage(), 100);
-        
+
         princess = new Princess(p);
         princess.setScreenWidth(s.getWidth());
         princess.setScreenHeight(s.getHeight());
@@ -166,7 +170,7 @@ public class JustWork implements KeyListener, MouseListener{
         princess.setDialogue3("Could you save my sisters from the monsters?");
         princess.setDialogue4("Perfect! I'll give you this key to help you get stronger.");
         princess.setDialogue5("Just walk to the edge of the map when you're ready save my sisters.");
-        
+
         //monsters
         for(int i = 0; i < monsters.length; i++){
             monsters[i] = new Monster(mon);
@@ -174,19 +178,19 @@ public class JustWork implements KeyListener, MouseListener{
             monsters[i].setScreenWidth(s.getWidth());
             monsters[i].respawn(0, map.getX(), map.getY(), map.getWidth(), map.getHeight());
         }
-        
-         
+
+
         //guards
         for(int i = 0; i < guards.length; i++){
             guards[i] = new Monster(g);
-            guards[i].setX((float) (Math.cos(Math.PI/4 * i)*150) + princess.getX()); 
+            guards[i].setX((float) (Math.cos(Math.PI/4 * i)*150) + princess.getX());
             guards[i].setY((float) (Math.sin(Math.PI/4 * i)*150) + princess.getY());
             guards[i].setLevel(10);
         }
-        
+
         kills = 0;
         guardKills = 0;
-        
+
         // particles
         attacks = new Particles[10];
         for(int i = 0; i < 10; i++){
@@ -199,19 +203,19 @@ public class JustWork implements KeyListener, MouseListener{
         attacks[1].setDefaultCoord(-map.getWidth()-attacks[1].getWidth(), -map.getHeight()-attacks[1].getHeight());
         special[1].setDefaultCoord(-map.getWidth()-special[1].getWidth(), -map.getHeight()-special[1].getHeight());
         attackNumber = 0;
-        
+
         instruction = "Use WASD to move/arrow keys";
     }
-    
+
     //reinitialization, if the move on to the next map
     public void reInit(){
         switch(mapNumber){
-            case 2:  
+            case 2:
                 dialogueNumber = 0;
                 //map.setImage(new ImageIcon("src\\images\\CAT.jpg").getImage());
                 map.setX(-map.getWidth()/2);
                 map.setY(-map.getHeight()/2);
-        
+
                 //sets the mc's coordinates to the middle of the screen
                 mc.setX(defX);
                 mc.setY(defY);
@@ -229,32 +233,32 @@ public class JustWork implements KeyListener, MouseListener{
             try {
                 g.addScene(ImageIO.read(getClass().getResource("/images/guard2.png")),100);
                 m.addScene(ImageIO.read(getClass().getResource("/images/monster2.png")),100);
-                
+
             } catch (IOException ex) {
                 Logger.getLogger(JustWork.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-                
+
                 for(int i = 0; i<monsters.length; i++){
                     monsters[i].setAnimation(m);
                     monsters[i].respawn(10, map.getX(), map.getY(), map.getWidth(), map.getHeight());
                 }
                 for(int i = 0; i < guards.length; i++){
                     guards[i].setAnimation(g);
-                    guards[i].setX((float) (Math.cos(Math.PI/4 * i)*150) + princess.getX()); 
+                    guards[i].setX((float) (Math.cos(Math.PI/4 * i)*150) + princess.getX());
                     guards[i].setY((float) (Math.sin(Math.PI/4 * i)*150) + princess.getY());
                     guards[i].setVelocityX(0);
                     guards[i].setVelocityY(0);
                     guards[i].setLevel(20);
                 }
                 break;
-            case 3: 
+            case 3:
                 dialogueNumber = 0;
                 dialogue = "";
                 //map.setImage(new ImageIcon("src\\images\\CAT.jpg").getImage());
                 map.setX(-map.getWidth()/2);
                 map.setY(-map.getHeight()/2);
-        
+
                 //sets the mc's coordinates to the middle of the screen
                 mc.setX(defX);
                 mc.setY(defY);
@@ -272,7 +276,7 @@ public class JustWork implements KeyListener, MouseListener{
             try {
                 g2.addScene(ImageIO.read(getClass().getResource("/images/guard3.png")),100);
                 m2.addScene(ImageIO.read(getClass().getResource("/images/monster3.png")),100);
-                
+
             } catch (IOException ex) {
                 Logger.getLogger(JustWork.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -283,21 +287,21 @@ public class JustWork implements KeyListener, MouseListener{
                 }
                 for(int i = 0; i < guards.length; i++){
                     guards[i].setAnimation(g2);
-                    guards[i].setX((float) (Math.cos(Math.PI/4 * i)*150) + princess.getX()); 
+                    guards[i].setX((float) (Math.cos(Math.PI/4 * i)*150) + princess.getX());
                     guards[i].setY((float) (Math.sin(Math.PI/4 * i)*150) + princess.getY());
                     guards[i].setVelocityX(0);
                     guards[i].setVelocityY(0);
                     guards[i].setLevel(30);
                 }
-                
+
                 break;
-            
-            case 4: 
+
+            case 4:
                 dialogueNumber = 0;
                 map.setImage(new ImageIcon("src\\images\\CAT.jpg").getImage());
                 map.setX(-map.getWidth()/2);
                 map.setY(-map.getHeight()/2);
-        
+
                 //sets the mc's coordinates to the middle of the screen
                 mc.setX(defX);
                 mc.setY(defY);
@@ -315,7 +319,7 @@ public class JustWork implements KeyListener, MouseListener{
             try {
                 g3.addScene(ImageIO.read(getClass().getResource("/images/guard4.png")),100);
                 m3.addScene(ImageIO.read(getClass().getResource("/images/monster4.png")),100);
-                
+
             } catch (IOException ex) {
                 Logger.getLogger(JustWork.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -326,20 +330,20 @@ public class JustWork implements KeyListener, MouseListener{
                 }
                 for(int i = 0; i < guards.length; i++){
                     guards[i].setAnimation(g3);
-                    guards[i].setX((float) (Math.cos(Math.PI/4 * i)*150) + princess.getX()); 
+                    guards[i].setX((float) (Math.cos(Math.PI/4 * i)*150) + princess.getX());
                     guards[i].setY((float) (Math.sin(Math.PI/4 * i)*150) + princess.getY());
                     guards[i].setVelocityX(0);
                     guards[i].setVelocityY(0);
                     guards[i].setLevel(40);
                 }
-                
+
                 break;
-            case 5: 
+            case 5:
                 dialogueNumber = 0;
                 map.setImage(new ImageIcon("src\\images\\CAT.jpg").getImage());
                 map.setX(-map.getWidth()/2);
                 map.setY(-map.getHeight()/2);
-        
+
                 //sets the mc's coordinates to the middle of the screen
                 mc.setX(defX);
                 mc.setY(defY);
@@ -351,11 +355,11 @@ public class JustWork implements KeyListener, MouseListener{
                 p.addScene(ImageIO.read(getClass().getResource("/images/dragon.png")), hpTime);
                 //g4.addScene(ImageIO.read(getClass().getResource("/images/guard5.png")),100);
                 m4.addScene(ImageIO.read(getClass().getResource("/images/monster7.png")),100);
-                
+
             } catch (IOException ex) {
                 Logger.getLogger(JustWork.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }        
+        }
                 princess = new Monster(p);
                 princess.respawn(map.getX(), map.getY(), map.getWidth(), map.getHeight());
                 princess.setName("???");
@@ -369,23 +373,23 @@ public class JustWork implements KeyListener, MouseListener{
                 princess.setSpeed(0.2f);
 //                g4.addScene(new ImageIcon("src\\images\\monster7.png").getImage(), 100);
 //                m4.addScene(new ImageIcon("src\\images\\.png").getImage(), 100);
-                
+
                 for(int i = 0; i<monsters.length; i++){
                     monsters[i].setAnimation(m4);
-                    monsters[i].setX((float) (Math.cos(Math.PI/monsters.length/2 * i)*600) + princess.getX()); 
+                    monsters[i].setX((float) (Math.cos(Math.PI/monsters.length/2 * i)*600) + princess.getX());
                     monsters[i].setY((float) (Math.sin(Math.PI/monsters.length/2 * i)*600) + princess.getY());
                     monsters[i].setVelocityX(0);
                     monsters[i].setVelocityY(0);
                     monsters[i].setLevel(45);
                 }
                 break;
-            case 6: 
+            case 6:
                 dialogueNumber = 0;
                 Animation l = new Animation();
         {
             try {
                 l.addScene(ImageIO.read(getClass().getResource("/images/dragon3.png")),100);
-                
+
             } catch (IOException ex) {
                 Logger.getLogger(JustWork.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -417,15 +421,15 @@ public class JustWork implements KeyListener, MouseListener{
                 princess.setDialogue4("I thank you on behalf of the kingdom for saving us.");
                 princess.setDialogue5("Sorry, I forgot to introduce myself. My name is Ily, the youngest princess of Evilor.");
                 princess.setSaved(true);
-                
+
         }
-        
+
     }
-    
+
     //method that is run first, does initialization once, and then loops the game
     // and finally restores the screen
     public void run(){
-            running = true;   
+            running = true;
             try{
                 init();
                 gameLoop();
@@ -433,55 +437,55 @@ public class JustWork implements KeyListener, MouseListener{
                 s.restoreScreen();
             }
         }
-    
+
     //loops the game
     public void gameLoop(){
         // gets the timestarted so that it can keep track of all the time passed
         // time passed is used by animation, character movement, cooldowns and monster movement
         long startTime = System.currentTimeMillis();
         long cumTime = startTime;
-        
+
         while(running){
             timePassed = System.currentTimeMillis() - cumTime;
             cumTime += timePassed;
-            
+
             update(timePassed);
-            
+
             Graphics2D g = s.getGraphics();
             draw(g);
             g.dispose();
             s.update();
-            
+
             // thread sleeps for 20 ms
             try{
                 Thread.sleep(20);
             }catch(Exception ex){}
         }
     }
-    
+
     //stop method sets running to false, so next iteratino it will not loop
     public void stop(){
         running = false;
     }
-    
+
     //sets up animation for the character
     private Animation setup(String path, Animation a, int size, int frames, int row){
         for(int i = 1; i <= frames; i++){
             a.addScene(s.getSubImage(path, i, row, size),100);
-        }       
+        }
         return a;
     }
-   
+
     // updates all the coordinates every loop
     // has almost all of the game logic
     public void update(long timePassed){
-        //sets the mcs coordinates for the particles, only needed for once because it is a 
+        //sets the mcs coordinates for the particles, only needed for once because it is a
         // static variable
         attacks[1].setMC(mc.getX(), mc.getY());
-        
+
         //when map moves everything moves except mc
         if(mapMovableX()){
-            map.updateX(timePassed,-mc.getVelocityX());        
+            map.updateX(timePassed,-mc.getVelocityX());
             for(int i = 0; i<monsters.length;i++){
                 monsters[i].updateX(timePassed, -mc.getVelocityX());
             }
@@ -497,7 +501,7 @@ public class JustWork implements KeyListener, MouseListener{
         }
         if(mapMovableY()){
             map.setY(map.getY()+ (timePassed * -mc.getVelocityY()));
-            
+
             for(int i = 0; i<monsters.length; i++){
                 monsters[i].updateY(timePassed, -mc.getVelocityY());
             }
@@ -511,26 +515,26 @@ public class JustWork implements KeyListener, MouseListener{
         }else{
             mc.updateY(timePassed);
         }
-        
-        
+
+
         // all the monster calculations
         for(int i=0;i<monsters.length;i++){
             monsters[i].calcDistance(mc.getX(), mc.getY());
-            
+
             // if the monster is touching the mc then he takes damage
             if( mc.getX()+mc.getWidth() > monsters[i].getX()+10 && mc.getX() < monsters[i].getX()+monsters[i].getWidth()-10 &&
                 mc.getY()+mc.getHeight()> monsters[i].getY()+10 && mc.getY() < monsters[i].getY()+monsters[i].getHeight()-10){
                 mc.takeDmg(monsters[i].getAttack());
             }
-            
+
             //if the attacks is touching the monster the monster takes damage
             for(int j = 0; j < attacks.length; j++){
                 attacks[j].calcRange();
                 if( attacks[j].getX()+mc.getWidth() > monsters[i].getX() && attacks[j].getX() < monsters[i].getX()+monsters[i].getWidth() &&
                     attacks[j].getY()+attacks[j].getHeight()> monsters[i].getY() && attacks[j].getY() < monsters[i].getY()+monsters[i].getHeight()){
-                    
+
                     monsters[i].takeDmg(mc.getAttack());
-                    attacks[j].resetCoord();            
+                    attacks[j].resetCoord();
                     if(monsters[i].getDistance() < 600)chase(i, monsters);
                 }else if(attacks[j].getRange()> 500){
                     attacks[j].resetCoord();
@@ -541,14 +545,14 @@ public class JustWork implements KeyListener, MouseListener{
                 special[j].calcRange();
                 if( special[j].getX()+mc.getWidth() > monsters[i].getX() && special[j].getX() < monsters[i].getX()+monsters[i].getWidth() &&
                     special[j].getY()+special[j].getHeight()> monsters[i].getY() && special[j].getY() < monsters[i].getY()+monsters[i].getHeight()){
-                    
-                    monsters[i].takeDmg(mc.getAttack());     
+
+                    monsters[i].takeDmg(mc.getAttack());
                     if(monsters[i].getDistance() < 600)chase(i,monsters);
                 }else if(special[j].getRange()> 1000){
                     special[j].resetCoord();
                 }
             }
-            
+
             // if the monster dies, kills goes up and it respawns the monster
             if(monsters[i].getHealth() < 0){
                 kills += 1;
@@ -569,31 +573,31 @@ public class JustWork implements KeyListener, MouseListener{
                 monsters[i].setVelocityX(0);
                 monsters[i].setVelocityY(0);
             }
-            
+
             // updates the monsters x and y coordinates
             monsters[i].updateX(timePassed);
             monsters[i].updateY(timePassed);
-            
+
         }
         // all the guards calculations ( almost the exact same as the monsters calculations)
         if(mapNumber < 5){
         for(int i=0;i<guards.length;i++){
             guards[i].calcDistance(mc.getX(), mc.getY());
-            
+
             // if the monster is touching the mc then he takes damage
             if( mc.getX()+mc.getWidth() > guards[i].getX()+10 && mc.getX() < guards[i].getX()+guards[i].getWidth()-10 &&
                 mc.getY()+mc.getHeight()> guards[i].getY()+10 && mc.getY() < guards[i].getY()+guards[i].getHeight()-10){
                 mc.takeDmg(guards[i].getAttack());
             }
-            
+
             //if the attacks is touching the monster the monster takes damage
             for(int j = 0; j < attacks.length; j++){
                 attacks[j].calcRange();
                 if( attacks[j].getX()+mc.getWidth() > guards[i].getX() && attacks[j].getX() < guards[i].getX()+guards[i].getWidth() &&
                     attacks[j].getY()+attacks[j].getHeight()> guards[i].getY() && attacks[j].getY() < guards[i].getY()+guards[i].getHeight()){
-                    
+
                     guards[i].takeDmg(mc.getAttack());
-                    attacks[j].resetCoord();            
+                    attacks[j].resetCoord();
                     if(guards[i].getDistance() < 650)chase(i, guards);
                 }else if(attacks[j].getRange()> 500){
                     attacks[j].resetCoord();
@@ -604,14 +608,14 @@ public class JustWork implements KeyListener, MouseListener{
                 special[j].calcRange();
                 if( special[j].getX()+mc.getWidth() > guards[i].getX() && special[j].getX() < guards[i].getX()+guards[i].getWidth() &&
                     special[j].getY()+special[j].getHeight()> guards[i].getY() && special[j].getY() < guards[i].getY()+guards[i].getHeight()){
-                    
-                    guards[i].takeDmg(mc.getAttack());     
+
+                    guards[i].takeDmg(mc.getAttack());
                     if(guards[i].getDistance() < 650)chase(i, guards);
                 }else if(special[j].getRange()> 1000){
                     special[j].resetCoord();
                 }
             }
-            
+
             // if the guard dies, it does NOT respawn and guardkills go up
             if(guards[i].getHealth() < 0){
                 kills += 1;
@@ -634,7 +638,7 @@ public class JustWork implements KeyListener, MouseListener{
                 guards[i].setVelocityX(0);
                 guards[i].setVelocityY(0);
             }
-            
+
             // updates the guards x and y coordinates
             guards[i].updateX(timePassed);
             guards[i].updateY(timePassed);
@@ -659,18 +663,18 @@ public class JustWork implements KeyListener, MouseListener{
             mc.manaRegen(mc.mRegen);
             mc.setMTime(0);
         }
-        
+
         //updates the x and y for the attacks
         for(int i = 0; i<attacks.length; i++){
             attacks[i].updateX(timePassed);
-            attacks[i].updateY(timePassed); 
+            attacks[i].updateY(timePassed);
         }
         //updates the x and y for the attacks
         for(int i = 0; i<special.length; i++){
             special[i].updateX(timePassed);
             special[i].updateY(timePassed);
         }
-        
+
         //checks if you saved the princess
         if(guardKills == 8){
             princess.setSaved(true);
@@ -701,7 +705,7 @@ public class JustWork implements KeyListener, MouseListener{
         }
         if(princess.getHealth() != 1){
             princess.calcDistance(mc.getX(), mc.getY());
-            
+
             // if the monster is touching the mc then he takes damage
             if( mc.getX()+mc.getWidth() > princess.getX()+10 && mc.getX() < princess.getX()+princess.getWidth()-10 &&
                 mc.getY()+mc.getHeight()> princess.getY()+10 && mc.getY() < princess.getY()+princess.getHeight()-10){
@@ -712,13 +716,13 @@ public class JustWork implements KeyListener, MouseListener{
                 attacks[j].calcRange();
                 if( attacks[j].getX()+mc.getWidth() > princess.getX() && attacks[j].getX() < princess.getX()+princess.getWidth() &&
                     attacks[j].getY()+attacks[j].getHeight()> princess.getY() && attacks[j].getY() < princess.getY()+princess.getHeight()){
-                    
-                    princess.setHealth(princess.getHealth()- mc.getAttack());    
-                    attacks[j].resetCoord();            
+
+                    princess.setHealth(princess.getHealth()- mc.getAttack());
+                    attacks[j].resetCoord();
                     if(princess.getDistance() < 1000 && princess.getDistance() != 0 ){
                         princess.setVelocityX((float) ((int) (mc.getX()-princess.getX()) / (float)(princess.getDistance()/ princess.getSpeed())));
                         princess.setVelocityY((float) ((int) (mc.getY()-princess.getY()) / (float)(princess.getDistance()/ princess.getSpeed())));
-                        
+
                     }
                 }else if(attacks[j].getRange()> 500){
                     attacks[j].resetCoord();
@@ -729,8 +733,8 @@ public class JustWork implements KeyListener, MouseListener{
                 special[j].calcRange();
                 if( special[j].getX()+mc.getWidth() > princess.getX() && special[j].getX() < princess.getX()+princess.getWidth() &&
                     special[j].getY()+special[j].getHeight()> princess.getY() && special[j].getY() < princess.getY()+princess.getHeight()){
-                    
-                    princess.setHealth(princess.getHealth()- mc.getAttack());     
+
+                    princess.setHealth(princess.getHealth()- mc.getAttack());
                     if(princess.getDistance() < 600){
                         if(princess.getDistance() !=0){
                             princess.setVelocityX((float) ((int) (mc.getX()-princess.getX()) / (float)(princess.getDistance()/ princess.getSpeed())));
@@ -743,7 +747,7 @@ public class JustWork implements KeyListener, MouseListener{
             }
             if(princess.getDistance() < 1000 && princess.getDistance() != 0 ){
                 princess.setVelocityX((float) ((int) (mc.getX()-princess.getX()) / (float)(princess.getDistance()/ princess.getSpeed())));
-                princess.setVelocityY((float) ((int) (mc.getY()-princess.getY()) / (float)(princess.getDistance()/ princess.getSpeed())));       
+                princess.setVelocityY((float) ((int) (mc.getY()-princess.getY()) / (float)(princess.getDistance()/ princess.getSpeed())));
             }else{
                 princess.setVelocityX(0);
                 princess.setVelocityY(0);
@@ -758,14 +762,14 @@ public class JustWork implements KeyListener, MouseListener{
                 dialogue = princess.dialogue1();
                 dialogueNumber = 1;
             }
-            
+
             if(princess.isSaved() && mapNumber == 7 && dialogue.isEmpty() && dialogueNumber >3){
                 win = true;
                 gameOver.setVisible(true);
             }
         }
     }
-    
+
     public void chase(int i, Monster[] m){
         // sets the x and y speed of the monster
         // distance cannot be 0 because division by 0 cannot occur
@@ -784,9 +788,9 @@ public class JustWork implements KeyListener, MouseListener{
             return false;
         }else{
             return true;
-        }   
+        }
     }
-    
+
     //figures out if the map can move in the y direction
     private boolean mapMovableY(){
         if(map.getY() >= 0 && mc.getVelocityY() <= 0){
@@ -800,7 +804,7 @@ public class JustWork implements KeyListener, MouseListener{
             return true;
         }
     }
-    
+
      //draws everything
     /* In this order
     BG
@@ -820,7 +824,7 @@ public class JustWork implements KeyListener, MouseListener{
         //Sprite
         g.drawImage(mc.getImage(),Math.round(mc.getX()),Math.round(mc.getY()),null);
         g.setFont(new Font("Arial", Font.PLAIN ,12));
-        
+
         // princess
         if(princess.getHealth()==1){
             g.drawImage(princess.getImage(), Math.round(princess.getX()), Math.round(princess.getY()), 96, 96, null);
@@ -830,7 +834,7 @@ public class JustWork implements KeyListener, MouseListener{
             g.drawString("Lvl. "+50, princess.getX()-35, princess.getY()-5);
             g.setColor(Color.RED);
             g.fillRect(Math.round(princess.getX()), Math.round(princess.getY()) - 15,(int)(princess.getWidth() *(princess.getHealth()/princess.getMaxHP())), 10);
-        
+
         }
         //Monsters
         for(int i = 0; i < monsters.length; i++){
@@ -852,7 +856,7 @@ public class JustWork implements KeyListener, MouseListener{
             g.fillRect(Math.round(guards[i].getX()), Math.round(guards[i].getY()) - 15,(int)(100 *(guards[i].getHealth()/guards[i].getMaxHP())), 10);
         }
         }
-        
+
         //attacks
         for(int i = 0; i<attacks.length; i++){
             g.drawImage(attacks[i].getImage(), Math.round(attacks[i].getX()),Math.round(attacks[i].getY()), null);
@@ -860,16 +864,16 @@ public class JustWork implements KeyListener, MouseListener{
         for(int i = 0; i < special.length; i++){
             g.drawImage(special[i].getImage(),Math.round(special[i].getX()),Math.round(special[i].getY()), null);
         }
-        
+
         //Health bar
         int height = 20;
         g.setColor(Color.RED);
         g.fillRect(15, s.getHeight()-2*height-20,(int) ((s.getWidth()-150)*mc.getHealth()/mc.getMaxHP()), height);
-        
+
         //Mana bar
         g.setColor(Color.BLUE);
         g.fillRect(15, s.getHeight()-height-10,(int) ((s.getWidth()-150)*(mc.getMana()/mc.getMaxMP())), height);
-        
+
         //exp bar
         g.setColor(Color.GREEN);
         g.fillRect(15, s.getHeight()-3*height-30, (int) ((s.getWidth()-150)*(mc.getEXP()/mc.getMaxEXP())), height/2);
@@ -877,8 +881,8 @@ public class JustWork implements KeyListener, MouseListener{
         g.drawString(mc.getHealth() + "/" + mc.getMaxHP(),(s.getWidth()-150)/2, s.getHeight()-2*height-5 );
         g.drawString(mc.getMana() + "/" + mc.getMaxMP(),(s.getWidth()-150)/2, s.getHeight()-height+5 );
         g.drawString("Lvl. "+mc.level, 15, s.getHeight()-3*height-50);
-        
-        
+
+
         //menu
         statButton.draw(g);
         if(statMenu.isVisible()){
@@ -903,7 +907,7 @@ public class JustWork implements KeyListener, MouseListener{
             g.drawString(dialogue, 210 + 20, s.getHeight() - h + 50);
             g.drawImage(princess.getImage(), 10, s.getHeight() - 210 -5, 210, 210, null);
         }
-//        gameOver.setVisible(true); 
+//        gameOver.setVisible(true);
 //        win = true;
         if(gameOver.isVisible() && win == false){
             g.setColor(Color.BLACK);
@@ -920,9 +924,9 @@ public class JustWork implements KeyListener, MouseListener{
             g.drawString("YOU WIN!!!", s.getWidth()/2-50*6/2, 300);
             gameOver.draw(g);
         }
-        
+
     }
-    
+
     // does actions for keys pressed
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
@@ -962,10 +966,10 @@ public class JustWork implements KeyListener, MouseListener{
             }
         }
         mc.update(timePassed);
-        
-        
+
+
     }
-    
+
     // resets all the velocities to 0 after the key is released
     public void keyReleased(KeyEvent e) {
         int keyCode = e.getKeyCode();
@@ -974,15 +978,15 @@ public class JustWork implements KeyListener, MouseListener{
         if(keyCode == KeyEvent.VK_RIGHT || keyCode == KeyEvent.VK_D)mc.setVelocityX(0);
         if(keyCode == KeyEvent.VK_LEFT || keyCode == KeyEvent.VK_A)mc.setVelocityX(0);
     }
-    
-        
+
+
     // checks if you click any of the button and does stuff accordingly
     public void mousePressed(MouseEvent e) {
     /*
         princess.getWidth()+10, s.getHeight()-h-10, s.getWidth()-100-princess.getWidth(), h
         */
     //princess's dialogue
-    if(princess.isSaved() && !dialogue.isEmpty() && e.getX() > 210+10 && e.getX() < s.getWidth()-110 
+    if(princess.isSaved() && !dialogue.isEmpty() && e.getX() > 210+10 && e.getX() < s.getWidth()-110
             && e.getY() >  s.getHeight()-110  && e.getY() < s.getHeight() - 10){
         dialogueNumber++;
     }
@@ -1044,7 +1048,7 @@ public class JustWork implements KeyListener, MouseListener{
     else if(statMenu.getHealthRegenButton().isLocked()== false &&
             mc.getSP() >= 3 && statMenu.isVisible() && e.getX()>statMenu.getHealthRegenButton().getX() && e.getX()< statMenu.getHealthRegenButton().getX() + statMenu.getHealthRegenButton().getWidth()
             && e.getY()>statMenu.getHealthRegenButton().getY() && e.getY()< statMenu.getHealthRegenButton().getY() + statMenu.getHealthRegenButton().getHeight()){
-        
+
             mc.percent += 1;
             mc.hRegen = (int) ((mc.getMaxHP()/100)*mc.percent);
         mc.hRegenUps++;
@@ -1068,7 +1072,7 @@ public class JustWork implements KeyListener, MouseListener{
         mc.useSP(3);
     }
     //mana Regen button when locked
-    else if(statMenu.getManaRegenButton().isLocked() && mc.getKeys() >0 
+    else if(statMenu.getManaRegenButton().isLocked() && mc.getKeys() >0
             && statMenu.isVisible() && e.getX()>statMenu.getManaRegenButton().getX() && e.getX()< statMenu.getManaRegenButton().getX() + statMenu.getManaRegenButton().getWidth()
             && e.getY()>statMenu.getManaRegenButton().getY() && e.getY()< statMenu.getManaRegenButton().getY() + statMenu.getManaRegenButton().getHeight()){
         statMenu.getManaRegenButton().setLocked(false);
@@ -1129,14 +1133,14 @@ public class JustWork implements KeyListener, MouseListener{
             //sets the velocity for the attack
             special[specialNumber].setVelocityX((special[specialNumber].getStartX()-(mc.getX() + mc.getWidth()/2)) / (special[specialNumber].getDistance()/special[specialNumber].getSpeed()));
             special[specialNumber].setVelocityY((special[specialNumber].getStartY()-(mc.getY() + mc.getHeight()/2)) / (special[specialNumber].getDistance()/special[specialNumber].getSpeed()));
-            
+
             mc.useMP(10);
             mc.setCTime(0);
             specialNumber++;
             if(specialNumber == 9){
             specialNumber = 0;
             }
-            
+
             if(iNumber == 2){
                 iNumber ++;
                 instruction = "Kill monsters and guards.";
@@ -1154,7 +1158,7 @@ public class JustWork implements KeyListener, MouseListener{
             //sets the velocity for the attack
             attacks[attackNumber].setVelocityX((attacks[attackNumber].getStartX()-(mc.getX() + mc.getWidth()/2)) / (attacks[attackNumber].getDistance()/attacks[attackNumber].getSpeed()));
             attacks[attackNumber].setVelocityY((attacks[attackNumber].getStartY()-(mc.getY() + mc.getHeight()/2)) / (attacks[attackNumber].getDistance()/attacks[attackNumber].getSpeed()));
-            
+
             mc.setCTime(0);
             attackNumber++;
             if(attackNumber == 9){
@@ -1166,10 +1170,10 @@ public class JustWork implements KeyListener, MouseListener{
             }
         }
     }
-    
-    
-    
-    
+
+
+
+
     }
     public void mouseReleased(MouseEvent e){}
     public void mouseEntered(MouseEvent e){}

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RPG:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6feaedf6-0010-4106-9658-910aad1c14fa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/.netbeans_automatic_build" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/.netbeans_automatic_build" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/.netbeans_update_resources" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/.netbeans_update_resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Attack2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/Attack2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/AttackUp.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/AttackUp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/CAT.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/CAT.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/CAT.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/CAT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/Heart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/HeartRegen.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/HeartRegen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Locked.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/Locked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Mana.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/Mana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ManaUp.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/ManaUp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Monsters.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/Monsters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/RedZombie.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/RedZombie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/SP.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/SP.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Speed.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/Speed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/attack.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/attack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/dragon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/dragon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/dragon.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/dragon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/dragon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/dragon2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/dragon3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/dragon3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gameOver.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/gameOver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/guard1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/guard1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/guard2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/guard2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/guard3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/guard3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/guard4.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/guard4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/hadouken.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/hadouken.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/Attack2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/Attack2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/AttackUp.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/AttackUp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/CAT.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/CAT.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/CAT.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/CAT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/Heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/Heart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/HeartRegen.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/HeartRegen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/Locked.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/Locked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/Mana.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/Mana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/ManaUp.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/ManaUp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/Monsters.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/Monsters.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/RedZombie.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/RedZombie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/SP.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/SP.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/Speed.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/Speed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/attack.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/attack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/dragon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/dragon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/dragon.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/dragon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/dragon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/dragon2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/dragon3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/dragon3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/gameOver.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/gameOver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/guard1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/guard1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/guard2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/guard2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/guard3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/guard3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/guard4.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/guard4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/hadouken.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/hadouken.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/map01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/map01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/mapgrass.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/mapgrass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/monster.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/monster.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/monster1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/monster1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/monster2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/monster2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/monster3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/monster3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/monster4.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/monster4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/monster7.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/monster7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/monster8.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/monster8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/monster9.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/monster9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/princess1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/princess1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/special.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/special.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/specialAttack.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/specialAttack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/images/spritesheet1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/images/spritesheet1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Animation$OneScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Animation$OneScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Animation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Animation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Button.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Button.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Character.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/GameOver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/GameOver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/JustWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/JustWork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Particles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Particles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Princess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Princess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/ScreenManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/ScreenManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Sprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Sprite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/justwork/Winner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/justwork/Winner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/map01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/map01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/mapgrass.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/mapgrass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/monster.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/monster.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/monster1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/monster1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/monster2.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/monster2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/monster3.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/monster3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/monster4.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/monster4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/monster7.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/monster7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/monster8.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/monster8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/monster9.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/monster9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/princess1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/princess1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/special.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/special.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/specialAttack.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/specialAttack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/spritesheet1.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/build/classes/spritesheet1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/JustWork.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/JustWork.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mapgrass.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/mapgrass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/justwork/JustWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/justwork/JustWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/justwork/Princess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/justwork/Princess.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/justwork/JustWork.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+              <folding>
+                <element signature="e#763#980#0" />
+                <element signature="e#20065#20066#0" expanded="true" />
+                <element signature="e#20096#20097#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/justwork/Princess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/justwork/Princess.java" />
+        <option value="$PROJECT_DIR$/src/justwork/JustWork.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/artifacts/RPG_jar.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="RPG_jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RPG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RPG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="justwork" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hasna\OneDrive\Documents\School\Grade 12\Computer Science\JustWork\RPG\out\production" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="JustWork" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="justwork.JustWork" />
+      <module name="RPG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="justwork.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JustWork" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6feaedf6-0010-4106-9658-910aad1c14fa" name="Default Changelist" comment="" />
+      <created>1554692360652</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554692360652</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24659607" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32872504" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/justwork/Princess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/justwork/JustWork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+          <folding>
+            <element signature="e#763#980#0" />
+            <element signature="e#20065#20066#0" expanded="true" />
+            <element signature="e#20096#20097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>RPG:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

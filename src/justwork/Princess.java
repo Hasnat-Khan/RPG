@@ -31,8 +31,8 @@ public class Princess extends Sprite{
         // left bound 0, map.getWidth
         // left bound map
         
-        this.setX(r.nextInt(mapWidth) + mapX);
-        this.setY(r.nextInt(mapHeight) + mapY);
+        this.setX(r.nextInt(mapWidth-300) + mapX+150);
+        this.setY(r.nextInt(mapHeight-300) + mapY+150);
         
         //if the princess spawns on the screen, she has to respawn
         if(this.getX() > 0 && this.getX() < screenWidth && this.getY() > 0 && this.getY() < screenHeight){
